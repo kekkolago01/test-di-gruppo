@@ -1,0 +1,24 @@
+nome = ""
+cognome = ""
+numero = "000"
+rubrica = []
+
+def aggiungi_contatto():
+    nome = input("Inserisci il nome: ")
+    cognome = input("Inserisci il cognome: ")
+    telefono = input("Inserisci il numero di telefono: ")
+    num = nome + "_" + cognome + "_" + telefono
+    while True:
+        telefono = input("Inserisci il numero di telefono: ")
+
+        if len(telefono) != 10 or not telefono.isdigit():
+            print("Attenzione: numero errato! Inserisci 10 cifre.")
+        else:
+            break
+
+    num = nome + "_" + cognome + "_" + telefono
+    rubrica.append(num)
+
+    print("Contatto aggiunto correttamente!")
+
+aggiungi_contatto()
